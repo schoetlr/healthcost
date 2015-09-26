@@ -1,0 +1,30 @@
+<div class="jumbotron">
+      <div class="container">
+
+      	<div class="row">
+          <div class="col-md-12">
+            <p id="intro"><strong>Health care pricing can differ significantly by provider,<span class="text-danger"> even for the same exact procedures, and visits.</span>  <span class="text-primary">HealthCostConnect's </span>mission is to provide you with the necessary information for you to make informed decisions as a health care consumer.</strong></p> <br><br>
+          </div> 
+          <div claSS="col-md-12 col-md-push-3">
+          <%= form_tag procedures_path, :method => 'get' do %>
+          <p>
+          <%= text_field_tag :search, params[:search], :id => "welcome-search" %>
+          <%= submit_tag "Search Procedures", :name => nil, :class => "btn btn-success btn-lg" %>
+          </p><br><br>
+          
+          <% end %>
+          </div>
+
+          <div class="col-md-12 col-md-push-4">
+          <%= link_to "List of Procedures", procedure_list_path, :class => "btn btn-lg btn-primary", style: "color:white" %>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+
+

@@ -1,0 +1,47 @@
+<%#= link_to "This Procedure", pro_show_path(@code => this_code) %>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>List of Procedures</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= link_to "Emergency Room Level 1", pro_show_path(code: '99281'), :method => :post %></td>
+        <td><%= link_to "Emergency Room Level 2", pro_show_path(code: '99282'), :method => :post %></td>
+        <td><%= link_to "Emergency Room Level 3", pro_show_path(code: '99283'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Emergency Room Level 4", pro_show_path(code: '99284'), :method => :post %></td>
+        <td><%= link_to "Emergency Room Level 5", pro_show_path(code: '99285'), :method => :post %></td>
+        <td><%= link_to "Emergency Room Critical Care", pro_show_path(code: '99291'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Vaginal Delivery", pro_show_path(code: '59409'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdominals w/Contrast Materials", pro_show_path(code: '74160'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdominals w/o & w/Contrast Material", pro_show_path(code: '74170'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "CT Scan Abdominals w/o Contrast Material", pro_show_path(code: '74150'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdomen and Pelvis w/Contrast Material", pro_show_path(code: '74177'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdominals and Pelvis w/o Contrast Material", pro_show_path(code: '74176'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "CT Scan Head/Brain w/o Contrast Materials", pro_show_path(code: '59409'), :method => :post %></td>
+        <td><%= link_to "CT Scan Chest w/Contrast Materials", pro_show_path(code: '74160'), :method => :post %></td>
+        <td><%= link_to "CT Scan Chest w/o Contrast Material", pro_show_path(code: '74170'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "CT Scan Pelvis w/Contrast Material", pro_show_path(code: '72193'), :method => :post %></td>
+        <td><%= link_to "DXA Bone Density Study", pro_show_path(code: '77080'), :method => :post %></td>
+        <td><%= link_to "MRI Brain w/ & w/o Contrast Material", pro_show_path(code: '70553'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Vaginal Delivery", pro_show_path(code: '59409'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdominals w/Contrast Materials", pro_show_path(code: '74160'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdominals w/o & w/Contrast Material", pro_show_path(code: '74170'), :method => :post %></td>
+      </tr>
+    </tbody>
+  </table>

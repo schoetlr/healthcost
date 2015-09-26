@@ -1,0 +1,39 @@
+
+
+
+
+
+<h1> Procedures</h1>
+<div class="row col-md-12">
+
+<table class="pro-show-table col-md-8">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Provider</th>
+      <th>Insurance Price</th>
+      <th>Cash Price</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @procedures.each do |procedure| %>
+      <tr>
+        <td><%= procedure.name %></td>
+        <td><%= procedure.provider.name %></td>
+        <td><%= procedure.cash_price %></td>
+        <td><%= procedure.insurance_price %></td>
+        <td><%= link_to 'Show', procedure %></td>
+        <td><%= link_to 'Edit', edit_procedure_path(procedure) %></td>
+        <td><%= link_to 'Destroy', procedure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+</div>
+<br><br><br>
