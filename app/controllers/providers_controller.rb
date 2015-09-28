@@ -1,7 +1,7 @@
 class ProvidersController < ApplicationController
 
 	def index
-      @providers = Provider.order(:created_at)
+      @providers = Provider.all
 	end
 
 	def search_by_address

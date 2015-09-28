@@ -1,5 +1,5 @@
 <div class="col-md-12 col-md-push-4">
-          <%= form_tag search_by_address_path, :method => 'get' do %>
+          <%= form_tag search_by_address_path, :method => 'put' do %>
           <p>
           <%= text_field_tag :address, params[:address] %>
           <%= submit_tag "Search Providers by Address", :name => nil, :class => "btn btn-success btn-lg" %>
@@ -22,7 +22,7 @@
 
 <% @providers.each do |provider| %>
       
-        <%= link_to provider.name, provider_path %>
+        <%= link_to provider.name, provider_path(provider) %>
         <%= provider.address %>
 
 <% end %>
