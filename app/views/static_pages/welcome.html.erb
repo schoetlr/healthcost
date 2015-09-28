@@ -3,9 +3,9 @@
 
       	<div class="row">
           <div class="col-md-12">
-            <p id="intro"><strong>Health care pricing can differ significantly by provider,<span class="text-danger"> even for the same exact procedures, and visits.</span>  <span class="text-primary">HealthCostConnect's </span>mission is to provide you with the necessary information for you to make informed decisions as a health care consumer.</strong></p> <br><br>
+            <p id="intro"><strong>Health care pricing can differ significantly by provider,<span class="text-danger"> even for the same exact procedures and visit types.</span>  <span class="text-primary">HealthCostConnect's </span>mission is to provide you with the necessary information for you to make informed decisions as a health care consumer.</strong></p> <br><br>
           </div> 
-          <div claSS="col-md-12 col-md-push-3">
+          <div class="col-md-12 col-md-push-3">
           <%= form_tag procedures_path, :method => 'get' do %>
           <p>
           <%= text_field_tag :search, params[:search], :id => "welcome-search" %>

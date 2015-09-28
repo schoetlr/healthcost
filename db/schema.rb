@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150925175025) do
+ActiveRecord::Schema.define(version: 20150927161119) do
 
   create_table "procedures", force: true do |t|
     t.string   "name"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20150925175025) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "address"
   end
 
   add_index "providers", ["email"], name: "index_providers_on_email", unique: true

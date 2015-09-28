@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def procedure_list
   end
+
+  def faq
+  end
 end

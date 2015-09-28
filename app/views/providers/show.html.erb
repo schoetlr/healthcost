@@ -1,16 +1,10 @@
-
-
-
-
-
-<h1> Procedures</h1>
-<div class="row col-md-12">
-
+<%= @provider.name %>
+<%= @provider.address %>
 <table class="pro-show-table col-md-8">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Provider</th>
+      <th>Procedure Name</th>
+      
       <th>Insurance Price</th>
       <th>Cash Price</th>
       
@@ -18,10 +12,10 @@
   </thead>
 
   <tbody>
-    <% @procedures.each do |procedure| %>
+    <% @provider.procedures.each do |procedure| %>
       <tr>
         <td><%= procedure.name %></td>
-        <td><%= procedure.provider.name %></td>
+        
         <td><%= procedure.cash_price %></td>
         <td><%= procedure.insurance_price %></td>
         <td><%= link_to 'Show', procedure %></td>
@@ -31,11 +25,5 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-
-</div>
-<br><br><br>
 
 <p>If you spot any pricing data you believe to be incorrect; please notify us at healhcostconnect@gmail.com</p>
