@@ -28,7 +28,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'spring',        group: :development
 gem 'geocoder'
 
-gem "twitter-bootstrap-rails"
+gem 'bootstrap-sass', '~> 3.3.5'
+
+
 gem 'binding_of_caller',    group: :development
 gem 'better_errors', '~> 2.0.0',    group: :development
 ruby "2.1.2"
