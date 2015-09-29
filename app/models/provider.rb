@@ -1,7 +1,7 @@
 class Provider < ActiveRecord::Base
 	geocoded_by :address
 	after_validation :geocode
-	reverse_geocoded_by :latitude, :longitude, :address => :location
+	reverse_geocoded_by :latitude, :longitude, :address => :address
 	after_validation :reverse_geocode
 
 	has_many :procedures
