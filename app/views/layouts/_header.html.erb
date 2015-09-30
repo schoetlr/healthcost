@@ -21,6 +21,7 @@
             
             
             <% if provider_signed_in? %>
+            <li><%= current_provider.name %></li>
             <li><%= link_to "New Procedure", new_procedure_path, :class => "nav-text" %></li>
             <li><%= link_to "Provider Log out", destroy_provider_session_path, :method => :delete, :class => "nav-text" %></li>
             <% else %>
