@@ -31,6 +31,7 @@ class ProceduresController < ApplicationController
 
   # GET /procedures/1/edit
   def edit
+    @procedure = Procedure.includes(:provider).find(params[:id])
   end
 
   # POST /procedures
@@ -55,8 +56,9 @@ class ProceduresController < ApplicationController
   # PATCH/PUT /procedures/1
   # PATCH/PUT /procedures/1.json
   def update
+        @procedure = Procedure.includes(:provider).find(params[:id])
     respond_to do |format|
-      if @provider.procedure.update(procedure_params)
+      if @procedure.update(procedure_params)
         format.html { redirect_to @procedure, notice: 'Procedure was successfully updated.' }
         format.json { render :show, status: :ok, location: @procedure }
       else
