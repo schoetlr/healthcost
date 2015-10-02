@@ -23,6 +23,6 @@
 <% @providers.each do |provider| %>
       
         <%= link_to provider.name, provider_path(provider) %>
-        <%= provider.address %>
+        <%= provider.address %><br>
 
 <% end %>

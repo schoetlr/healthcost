@@ -18,7 +18,7 @@ class ProvidersController < ApplicationController
 
 	def show
 	  @procedures = Procedure.all
-      @provider = Provider.includes(:procedure).find(params[:id])
+      @provider = Provider.includes(:procedures).find(params[:id])
 	end
 
 	def provider_params
