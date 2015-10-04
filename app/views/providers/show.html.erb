@@ -1,6 +1,14 @@
-<%= @provider.name %>
-<%= @provider.address %>
-<table class="pro-show-table col-md-8">
+<div class="row">
+  <div class="col-md-12">
+
+    <h1><strong><%= @provider.name %></strong></h1>
+    <h4><%= @provider.address %></h4>
+    
+  </div>
+</div>
+
+<div class="row">
+<table class="pro-show-table col-md-12">
   <thead>
     <tr>
       <th>Procedure Name</th>
@@ -15,9 +23,9 @@
     <% @provider.procedures.each do |procedure| %>
       <tr>
         <td><%= procedure.name %></td>
-        
-        <td><%= procedure.cash_price %></td>
         <td><%= procedure.insurance_price %></td>
+        <td><%= procedure.cash_price %></td>
+      
         <td><%= link_to 'Show', procedure %></td>
         <td><%= link_to 'Edit', edit_procedure_path(procedure) %></td>
         <td><%= link_to 'Destroy', procedure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,5 +33,6 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <p>If you spot any pricing data you believe to be incorrect; please notify us at healhcostconnect@gmail.com</p>
