@@ -1,13 +1,15 @@
 <%#= link_to "This Procedure", pro_show_path(@code => this_code) %>
+<h1>List of Procedures</h1>
 
 <table class="table">
     <thead>
       <tr>
-        <th>List of Procedures</th>
+        
         
       </tr>
     </thead>
     <tbody>
+      <tr><th>Emergency Room</th></tr>
       <tr>
         <td><%= link_to "Emergency Room Level 1", pro_show_path(code: '99281'), :method => :post %></td>
         <td><%= link_to "Emergency Room Level 2", pro_show_path(code: '99282'), :method => :post %></td>
@@ -18,15 +20,16 @@
         <td><%= link_to "Emergency Room Level 5", pro_show_path(code: '99285'), :method => :post %></td>
         <td><%= link_to "Emergency Room Critical Care", pro_show_path(code: '99291'), :method => :post %></td>
       </tr>
+      <tr><th>Radiology</th></tr>
       <tr>
-        <td><%= link_to "Vaginal Delivery", pro_show_path(code: '59409'), :method => :post %></td>
-        <td><%= link_to "CT Scan Abdominals w/Contrast Materials", pro_show_path(code: '74160'), :method => :post %></td>
-        <td><%= link_to "CT Scan Abdominals w/o & w/Contrast Material", pro_show_path(code: '74170'), :method => :post %></td>
+        
+        <td><%= link_to "CT Scan Abdomen w/Contrast Materials", pro_show_path(code: '74160'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdomen w/o & w/Contrast Material", pro_show_path(code: '74170'), :method => :post %></td>
       </tr>
       <tr>
-        <td><%= link_to "CT Scan Abdominals w/o Contrast Material", pro_show_path(code: '74150'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdomen w/o Contrast Material", pro_show_path(code: '74150'), :method => :post %></td>
         <td><%= link_to "CT Scan Abdomen and Pelvis w/Contrast Material", pro_show_path(code: '74177'), :method => :post %></td>
-        <td><%= link_to "CT Scan Abdominals and Pelvis w/o Contrast Material", pro_show_path(code: '74176'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdomen and Pelvis w/o Contrast Material", pro_show_path(code: '74176'), :method => :post %></td>
       </tr>
       <tr>
         <td><%= link_to "CT Scan Head/Brain w/o Contrast Materials", pro_show_path(code: '59409'), :method => :post %></td>
@@ -43,5 +46,97 @@
         <td><%= link_to "CT Scan Abdominals w/Contrast Materials", pro_show_path(code: '74160'), :method => :post %></td>
         <td><%= link_to "CT Scan Abdominals w/o & w/Contrast Material", pro_show_path(code: '74170'), :method => :post %></td>
       </tr>
+      <tr>
+        <td><%= link_to "MRI Breast DX", pro_show_path(code: '77059'), :method => :post %></td>
+        <td><%= link_to "MRI Cervical w/ & w/o", pro_show_path(code: '72156'), :method => :post %></td>
+        <td><%= link_to "MRI Lumbar w/ & w/o", pro_show_path(code: '72158'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Ultrasound Abdomen Single Organ", pro_show_path(code: '76705'), :method => :post %></td>
+        <td><%= link_to "Ultrasound Abdomen Complete", pro_show_path(code: '76700'), :method => :post %></td>
+        <td><%= link_to "Ultrasound Aorta", pro_show_path(code: '93978'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Ultrasound Carotid", pro_show_path(code: '93880'), :method => :post %></td>
+        <td><%= link_to "Ultrasound Gallbladder", pro_show_path(code: '76705'), :method => :post %></td>
+        <td><%= link_to "Ultrasound Pelvis", pro_show_path(code: '76856'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Ultrasound Pelivs Transvag Non-OB", pro_show_path(code: '76830'), :method => :post %></td>
+        <td><%= link_to "Ultrasound Renal", pro_show_path(code: '76775'), :method => :post %></td>
+        <td><%= link_to "Ultrasound Testicular", pro_show_path(code: '76870'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Ultrasound Venous LE", pro_show_path(code: '93971'), :method => :post %></td>
+        <td><%= link_to "X-Ray Abdomen", pro_show_path(code: '74022'), :method => :post %></td>
+        <td><%= link_to "X-Ray Ankle", pro_show_path(code: '73619'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "X-Ray Cervical", pro_show_path(code: '72050'), :method => :post %></td>
+        <td><%= link_to "X-Ray Chest 2 View", pro_show_path(code: '71020'), :method => :post %></td>
+        <td><%= link_to "X-Ray Elbow", pro_show_path(code: '73080'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "X-Ray Foot 3+ View", pro_show_path(code: '73630'), :method => :post %></td>
+        <td><%= link_to "X-Ray Hand 3+ View", pro_show_path(code: '73130'), :method => :post %></td>
+        <td><%= link_to "X-Ray Hip 2+ View", pro_show_path(code: '73530'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "X-Ray Knee 1-2 View", pro_show_path(code: '73564'), :method => :post %></td>
+        <td><%= link_to "X-Ray Knee 3+ View", pro_show_path(code: '73562'), :method => :post %></td>
+        <td><%= link_to "X-Ray Lumbar", pro_show_path(code: '72100'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "X-Ray Shoulder", pro_show_path(code: '73030'), :method => :post %></td>
+        <td><%= link_to "X-Ray Wrist", pro_show_path(code: '73110'), :method => :post %></td>
+        <td><%= link_to "EKG", pro_show_path(code: '93000'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Echocardiography", pro_show_path(code: '93307'), :method => :post %></td>
+        <td><%= link_to "Echocardiography Stress", pro_show_path(code: '93350'), :method => :post %></td>
+        <td><%= link_to "Holter Record", pro_show_path(code: '93225'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Vaginal Delivery", pro_show_path(code: '93226'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdominals w/Contrast Materials", pro_show_path(code: '78452'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdominals w/o & w/Contrast Material", pro_show_path(code: '93017'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Aerosol TX", pro_show_path(code: '94640'), :method => :post %></td>
+        <td><%= link_to "Spirometry", pro_show_path(code: '94010'), :method => :post %></td>
+        <td><%= link_to "Sleep Study 4/Mor", pro_show_path(code: '95810'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Sleep Study Unattended", pro_show_path(code: '95806'), :method => :post %></td>
+        <td><%= link_to "EEG", pro_show_path(code: '95816'), :method => :post %></td>
+        
+      </tr>
+
+      <tr>
+      <th>Physical Therapy</th>
+      </tr>
+      <tr>
+        <td><%= link_to "E-Stim Therapy", pro_show_path(code: '97014'), :method => :post %></td>
+        <td><%= link_to "Physical Therapy First Visit", pro_show_path(code: '97001'), :method => :post %></td>
+        <td><%= link_to "Iontophoresis", pro_show_path(code: '97033'), :method => :post %></td>
+      </tr>
+
+      <tr>
+        <td><%= link_to "Gait 15 Min", pro_show_path(code: '97116'), :method => :post %></td>
+        <td><%= link_to "Ther Activity", pro_show_path(code: '97530'), :method => :post %></td>
+        <td><%= link_to "Ther Ex 15 Min", pro_show_path(code: '97110'), :method => :post %></td>
+      </tr>
+
+      <tr>
+        <td><%= link_to "Man Tech 15 Min", pro_show_path(code: '97140'), :method => :post %></td>
+        <td><%= link_to "Re-Eval", pro_show_path(code: '97002'), :method => :post %></td>
+        <td><%= link_to "Neuromuscular Re-Ed", pro_show_path(code: '97112'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Ultrasound 15 Min", pro_show_path(code: '97014'), :method => :post %></td>
+        
+      </tr>
+
+      </tbody>
     </tbody>
   </table>
