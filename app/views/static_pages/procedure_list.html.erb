@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr><th>Emergency Room</th></tr>
+      <tr><th>Emergency Room</th><td></td><td></td></tr>
       <tr>
         <td><%= link_to "Emergency Room Level 1", pro_show_path(code: '99281'), :method => :post %></td>
         <td><%= link_to "Emergency Room Level 2", pro_show_path(code: '99282'), :method => :post %></td>
@@ -20,7 +20,7 @@
         <td><%= link_to "Emergency Room Level 5", pro_show_path(code: '99285'), :method => :post %></td>
         <td><%= link_to "Emergency Room Critical Care", pro_show_path(code: '99291'), :method => :post %></td>
       </tr>
-      <tr><th>Radiology</th></tr>
+      <tr><th>Radiology</th><td></td><td></td></tr>
       <tr>
         
         <td><%= link_to "CT Scan Abdomen w/Contrast Materials", pro_show_path(code: '74160'), :method => :post %></td>
@@ -114,7 +114,7 @@
       </tr>
 
       <tr>
-      <th>Physical Therapy</th>
+      <th>Physical Therapy</th><td></td><td></td>
       </tr>
       <tr>
         <td><%= link_to "E-Stim Therapy", pro_show_path(code: '97014'), :method => :post %></td>
