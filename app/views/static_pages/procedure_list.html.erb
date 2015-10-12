@@ -1,5 +1,5 @@
 <%#= link_to "This Procedure", pro_show_path(@code => this_code) %>
-<h1>List of Procedures</h1>
+<h1>All Procedures</h1>
 
 <table class="table">
     <thead>
@@ -25,6 +25,7 @@
         
         <td><%= link_to "CT Scan Abdomen w/Contrast Materials", pro_show_path(code: '74160'), :method => :post %></td>
         <td><%= link_to "CT Scan Abdomen w/o & w/Contrast Material", pro_show_path(code: '74170'), :method => :post %></td>
+        <td><%= link_to "EEG", pro_show_path(code: '95816'), :method => :post %></td>
       </tr>
       <tr>
         <td><%= link_to "CT Scan Abdomen w/o Contrast Material", pro_show_path(code: '74150'), :method => :post %></td>
@@ -108,7 +109,7 @@
       </tr>
       <tr>
         <td><%= link_to "Sleep Study Unattended", pro_show_path(code: '95806'), :method => :post %></td>
-        <td><%= link_to "EEG", pro_show_path(code: '95816'), :method => :post %></td>
+        
         
       </tr>
 
@@ -134,6 +135,8 @@
       </tr>
       <tr>
         <td><%= link_to "Ultrasound 15 Min", pro_show_path(code: '97014'), :method => :post %></td>
+        <td></td>
+        <td></td>
         
       </tr>
 
