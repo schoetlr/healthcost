@@ -33,8 +33,10 @@
         <td><%= procedure.cash_price %></td>
       
         <td><%= link_to 'Show', procedure %></td>
+        <% if provider_signed_in? %>
         <td><%= link_to 'Edit', edit_procedure_path(procedure) %></td>
         <td><%= link_to 'Destroy', procedure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
