@@ -1,5 +1,5 @@
 class ProceduresController < ApplicationController
-  before_filter :authenticate_provider!, :except => [:index, :show]
+  before_filter :authenticate_provider!, :except => [:index, :show, :pro_show]
  
   # GET /procedures
   # GET /procedures.json

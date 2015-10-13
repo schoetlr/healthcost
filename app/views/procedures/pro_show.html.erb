@@ -1,4 +1,8 @@
-<h1>Identical Procedures</h1>
+<div class="row">
+  <div class="col-sm-12 col-sm-push-4">
+    <h1>Procedures</h1>
+  </div>
+</div>
 <div class="row col-md-12">
 
 <table class="pro-show-table col-md-8 table-striped table bordered table-condensed">
@@ -21,8 +25,10 @@
         <td><%= procedure.cash_price %></td>
         
         <td><%= link_to 'Show', procedure %></td>
+        <% if provider_signed_in? %>
         <td><%= link_to 'Edit', edit_procedure_path(procedure) %></td>
         <td><%= link_to 'Destroy', procedure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

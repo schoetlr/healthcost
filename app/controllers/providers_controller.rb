@@ -1,6 +1,8 @@
 class ProvidersController < ApplicationController
-
-	def index
+  
+  before_filter :authenticate_provider!, :except => [:index, :show, :search_by_address, :search_by_name]
+	
+  def index
       @providers = Provider.all
 	end
 
