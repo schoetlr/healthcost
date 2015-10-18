@@ -3,8 +3,13 @@ class ProvidersController < ApplicationController
   before_filter :authenticate_provider!, :except => [:index, :show, :search_by_address, :search_by_name]
 	
   def index
-      @providers = Provider.all
-	end
+  @providers = Provider.all
+  if params[:search]
+    @providers = Provider.search(params[:search]).order("created_at DESC")
+  else
+    @providers = Provider.all.order('created_at DESC')
+  end
+  end
 
 	def search_by_address
 
@@ -13,10 +18,7 @@ class ProvidersController < ApplicationController
       render 'providers/search_by_address'
     end
 
-    def search_by_name
-      @providers = Provider.search(params[:search])
-      render 'providers/search_by_name'
-    end
+    
 
 	def show
 	  @procedures = Procedure.all

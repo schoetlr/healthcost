@@ -4,9 +4,13 @@ class ProceduresController < ApplicationController
   # GET /procedures
   # GET /procedures.json
   def index
-    @procedures = Procedure.search(params[:search])
-    render `procedures/index`
+    @procedures = Procedure.all
+  if params[:search]
+    @procedures = Procedure.search(params[:search]).order("created_at DESC")
+  else
+    @procedures = Procedure.all.order('created_at DESC')
   end
+end
 
   # GET /procedures/1
   # GET /procedures/1.json

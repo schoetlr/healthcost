@@ -6,9 +6,9 @@
             <p id="intro"><strong>Health care pricing can differ significantly by provider,<span class="text-danger"> even for the same exact procedures and visit types.</span>  <span class="text-primary">HealthCostConnect's </span>mission is to provide you with the necessary information for you to make informed decisions as a health care consumer.</strong></p> <br><br>
           </div> 
           <div class="col-md-12 col-md-push-3">
-          <%= form_tag procedures_path, :method => 'get' do %>
+          <%= form_tag procedures_path, :method => 'get', id: "welcome-search" do %>
           <p>
-          <%= text_field_tag :search, params[:search], :id => "welcome-search" %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Procedures" %>
           <%= submit_tag "Search Procedures", :name => nil, :class => "btn btn-success btn-lg" %>
           </p><br><br>
           
