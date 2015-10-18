@@ -145,9 +145,34 @@
       <th>Gastroenterology</th><td></td><td></td>
       </tr>
       <tr>
-        <td><%= link_to "Facility and Physician Fee", pro_show_path(code: '45378'), :method => :post %></td>
-        <td><%= link_to "Facility and Physician Fee Endoscopy EGD", pro_show_path(code: '43235'), :method => :post %></td>
-        <td><%= link_to "Colonoscopy", pro_show_path(code: '97033'), :method => :post %></td>
+        <td><%= link_to "Facility and Physician Fee", pro_show_path(code: 'FFPF'), :method => :post %></td>
+        <td><%= link_to "Endoscopy Colon/EGD", pro_show_path(code: '4537843235'), :method => :post %></td>
+        <td><%= link_to "Colonoscopy", pro_show_path(code: '45378'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Facility and Physician Fee", pro_show_path(code: 'FFPF45378'), :method => :post %></td>
+        <td><%= link_to "EGD", pro_show_path(code: '43235'), :method => :post %></td>
+        <td><%= link_to "Facility and Physician Fee", pro_show_path(code: 'FFPF43235'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "GI OV L2", pro_show_path(code: '99213'), :method => :post %></td>
+        <td><%= link_to "GI OV L3", pro_show_path(code: '99213'), :method => :post %></td>
+        <td><%= link_to "GI OV L4", pro_show_path(code: '99214'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "GI OV L5", pro_show_path(code: '99215'), :method => :post %></td>
+        <td><%= link_to "GI OV L3 NP", pro_show_path(code: '99203'), :method => :post %></td>
+        <td><%= link_to "GI OV L4 NP", pro_show_path(code: '99204'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "GI Consult OP L2", pro_show_path(code: '99242'), :method => :post %></td>
+        <td><%= link_to "GI Consult OP L3", pro_show_path(code: '99243'), :method => :post %></td>
+        <td><%= link_to "GI Consult OP L4", pro_show_path(code: '99244'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "GI Consult OP L5", pro_show_path(code: '99245'), :method => :post %></td>
+        <td></td>
+        <td></td>
       </tr>
 
       <tr>
