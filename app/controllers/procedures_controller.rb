@@ -1,8 +1,14 @@
 class ProceduresController < ApplicationController
   before_filter :authenticate_provider!, :except => [:index, :show, :pro_show]
+  before_filter :correct_user, :except => [:index, :show, :pro_show]
  
   # GET /procedures
   # GET /procedures.json
+  def correct_user
+    @provider = Provider.find(params[:id])
+    redirect_to(provider_path(current_provider)) unless current_provider?(@provider)
+  end 
+
   def index
     @procedures = Procedure.all
   if params[:search]
