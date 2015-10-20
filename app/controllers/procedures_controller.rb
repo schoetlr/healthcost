@@ -5,7 +5,7 @@ class ProceduresController < ApplicationController
   # GET /procedures
   # GET /procedures.json
   def correct_user
-    @provider = Provider.find(params[:id])
+    @provider = @procedure.provider.find(params[:id])
     redirect_to(provider_path(current_provider)) unless current_provider?(@provider)
   end 
 
