@@ -92,28 +92,38 @@
         <td><%= link_to "X-Ray Wrist", pro_show_path(code: '73110'), :method => :post %></td>
         <td><%= link_to "EKG", pro_show_path(code: '93000'), :method => :post %></td>
       </tr>
+      
       <tr>
+        <td><%= link_to "CT Scan Pulmonary/Angiogram", pro_show_path(code: '71275'), :method => :post %></td>
+        <td><%= link_to "CT Scan Low Dose Cancer Screening", pro_show_path(code: '71250LD'), :method => :post %></td>
+        <td></td>
+      </tr>
+      
+
+      <th>Cardiology Testing</th><td></td><td></td></tr>
+      <tr>
+        
         <td><%= link_to "Echocardiography", pro_show_path(code: '93307'), :method => :post %></td>
         <td><%= link_to "Echocardiography Stress", pro_show_path(code: '93350'), :method => :post %></td>
         <td><%= link_to "Holter Record", pro_show_path(code: '93225'), :method => :post %></td>
       </tr>
-      
+
       <tr>
-        <td><%= link_to "Holter Analysis", pro_show_path(code: '93226'), :method => :post %></td>
-        <td><%= link_to "Aerosol TX", pro_show_path(code: '94640'), :method => :post %></td>
-        <td><%= link_to "Spirometry", pro_show_path(code: '94010'), :method => :post %></td>
         
-      </tr>
-      <tr>
-        <td><%= link_to "Sleep Study Unattended", pro_show_path(code: '95806'), :method => :post %></td>
-        <td><%= link_to "Vaginal Delivery", pro_show_path(code: '59409'), :method => :post %></td>
-        <td><%= link_to "Sleep Study 4/Mor", pro_show_path(code: '95810'), :method => :post %>/td>
-      </tr>
-      <tr>
+        <td><%= link_to "Holter Analysis", pro_show_path(code: '93226'), :method => :post %></td>
         <td><%= link_to "Myocardial Perfusion Spect", pro_show_path(code: '78452'), :method => :post %></td>
         <td><%= link_to "Stress Test", pro_show_path(code: '93017'), :method => :post %></td>
-        <td></td>
       </tr>
+      <th>Pulmonology Testing</th><td></td><td></td></tr>
+      <tr>
+        
+        <td><%= link_to "Sleep Study Unattended", pro_show_path(code: '95806'), :method => :post %></td>
+        <td><%= link_to "Spirometry", pro_show_path(code: '94010'), :method => :post %></td>
+        <td><%= link_to "Aerososl Treatment", pro_show_path(code: '94640'), :method => :post %></td>
+      </tr>
+      
+
+      <tr>
 
       <tr>
       <th>Physical Therapy</th><td></td><td></td>
@@ -146,13 +156,18 @@
       </tr>
       <tr>
         <td><%= link_to "Facility and Physician Fee", pro_show_path(code: 'FFPF'), :method => :post %></td>
-        <td><%= link_to "Endoscopy Colon/EGD", pro_show_path(code: '4537843235'), :method => :post %></td>
+        <td><%= link_to "Endoscopy Colon/EGD", pro_show_path(code: 'FF4537843235'), :method => :post %></td>
         <td><%= link_to "Colonoscopy", pro_show_path(code: '45378'), :method => :post %></td>
       </tr>
       <tr>
-        <td><%= link_to "Facility and Physician Fee", pro_show_path(code: 'FFPF45378'), :method => :post %></td>
+        <td><%= link_to "Facility and Physician Fee", pro_show_path(code: 'FFPF4537843235'), :method => :post %></td>
         <td><%= link_to "EGD", pro_show_path(code: '43235'), :method => :post %></td>
         <td><%= link_to "Facility and Physician Fee", pro_show_path(code: 'FFPF43235'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Endoscopy Colon", pro_show_path(code: 'FFPF4537843235'), :method => :post %></td>
+        <td><%= link_to "Endoscopy/EGD", pro_show_path(code: 'FF43235'), :method => :post %></td>
+        <td></td>
       </tr>
       <tr>
         <td><%= link_to "GI OV L2", pro_show_path(code: '99213'), :method => :post %></td>
@@ -235,8 +250,8 @@
       </tr>
       <tr>
         <td><%= link_to "Shave Lesion Face 0.5cm", pro_show_path(code: '99214'), :method => :post %></td>
-        <td><%= link_to "Sleep Study Unattended", pro_show_path(code: '95806'), :method => :post %></td>
-        <td><%= link_to "Spirometry", pro_show_path(code: '94010'), :method => :post %></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td><%= link_to "Injection Steriod 40mg", pro_show_path(code: 'J1030'), :method => :post %></td>
@@ -246,7 +261,7 @@
       <tr>
         <td><%= link_to "Injection Toradol 15mg", pro_show_path(code: 'J1885'), :method => :post %></td>
         <td><%= link_to "Vaccine Varicellla Chicken Pox", pro_show_path(code: '90716'), :method => :post %></td>
-        <td><%= link_to "WART Treatment Cryotherapy", pro_show_path(code: '17170'), :method => :post %></td>
+        <td><%= link_to "WART Treatment Cryotherapy", pro_show_path(code: '17110'), :method => :post %></td>
       </tr>
       <tr>
         <td><%= link_to "Vaccine Shingles", pro_show_path(code: '90736'), :method => :post %></td>
