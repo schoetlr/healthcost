@@ -1,6 +1,6 @@
 class ProceduresController < ApplicationController
   before_filter :authenticate_provider!, :except => [:index, :show, :pro_show]
-  before_action :find_procedure, only: [:edit, :update, :destroy]
+  before_action :find_procedure, only: [:edit, :update, :destroy, :new, :create]
   before_action :authorize_resource!, except: [:index, :show, :pro_show]
 
  
