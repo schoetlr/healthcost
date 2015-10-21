@@ -9,4 +9,13 @@ class ApplicationController < ActionController::Base
             devise_parameter_sanitizer.for(action).push(:name, :address)
         end
    end
+
+   rescue_from Provider::NotAuthorized, with: :deny_access
+   private
+
+    def deny_access
+      render 'some_view', status: 403
+    end
+
+
 end

@@ -1,6 +1,8 @@
 class ProceduresController < ApplicationController
   before_filter :authenticate_provider!, :except => [:index, :show, :pro_show]
-  #before_filter :correct_user, :except => [:index, :show, :pro_show]
+  before_action :find_procedure, only: [:edit, :update, :destroy]
+  before_action :authorize_resource!, except: [:index, :show, :pro_show]
+
  
   # GET /procedures
   # GET /procedures.json
@@ -91,9 +93,15 @@ end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_procedure
-      @procedure = Procedure.find(params[:id])
-    end
+    def find_procedure
+     @procedure = Procedure.find(params[:id])
+   end
+
+   def authorize_resource!
+     unless current_provider == @procedure.provider
+       raise Provider::NotAuthorized and return false
+     end
+   end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def procedure_params

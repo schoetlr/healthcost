@@ -1,4 +1,5 @@
 class Provider < ActiveRecord::Base
+  class NotAuthorized < StandardError; end
 	geocoded_by :address
 	after_validation :geocode
 	reverse_geocoded_by :latitude, :longitude, :address => :address
