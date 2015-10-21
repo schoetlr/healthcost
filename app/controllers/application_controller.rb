@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
    private
 
     def deny_access
-      render 'some_view', status: 403
+      render 'static_pages/not_authorized', status: 403
     end
 
 
