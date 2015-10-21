@@ -1,15 +1,8 @@
 class ProceduresController < ApplicationController
   before_filter :authenticate_provider!, :except => [:index, :show, :pro_show]
-  before_action :find_procedure, only: [:edit, :update, :destroy, :new, :create]
-  before_action :authorize_resource!, except: [:index, :show, :pro_show]
+  before_action :find_procedure, only: [:edit, :update, :destroy]
+  before_action :authorize_resource!, except: [:index, :show, :pro_show, :new, :create]
 
- 
-  # GET /procedures
-  # GET /procedures.json
-  def correct_user
-    @provider = Procedure.provider.find(params[:id])
-    redirect_to(provider_path(current_provider)) unless current_provider?(@provider)
-  end 
 
   def index
     @procedures = Procedure.all
