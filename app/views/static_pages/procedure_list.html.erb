@@ -90,7 +90,7 @@
       <tr>
         <td><%= link_to "X-Ray Shoulder", pro_show_path(code: '73030'), :method => :post %></td>
         <td><%= link_to "X-Ray Wrist", pro_show_path(code: '73110'), :method => :post %></td>
-        <td><%= link_to "EKG", pro_show_path(code: '93000'), :method => :post %></td>
+        <td></td>
       </tr>
       
       <tr>
@@ -103,11 +103,7 @@
         <td><%= link_to "Mammogram Screen", pro_show_path(code: '77057'), :method => :post %></td>
         <td><%= link_to "MRI Brain W", pro_show_path(code: '70552'), :method => :post %></td>
       </tr>
-      <tr>
-        <td><%= link_to "MRI Brain WO", pro_show_path(code: '70551'), :method => :post %></td>
-        <td><%= link_to "Mammogram ADD View/Mammogram Unilateral", pro_show_path(code: '77055'), :method => :post %></td>
-        <td></td>
-      </tr>
+      
       
 
       <th>Cardiology Testing</th><td></td><td></td></tr>
@@ -124,12 +120,23 @@
         <td><%= link_to "Myocardial Perfusion Spect", pro_show_path(code: '78452'), :method => :post %></td>
         <td><%= link_to "Stress Test", pro_show_path(code: '93017'), :method => :post %></td>
       </tr>
+      <tr>
+        
+        <td><%= link_to "Holter Analysis", pro_show_path(code: '93226'), :method => :post %></td>
+        <td><%= link_to "Myocardial Perfusion Spect", pro_show_path(code: '78452'), :method => :post %></td>
+        <td><%= link_to "Stress Test", pro_show_path(code: '93017'), :method => :post %></td>
+      </tr>
       <th>Pulmonology Testing</th><td></td><td></td></tr>
       <tr>
         
         <td><%= link_to "Sleep Study Unattended", pro_show_path(code: '95806'), :method => :post %></td>
         <td><%= link_to "Spirometry", pro_show_path(code: '94010'), :method => :post %></td>
         <td><%= link_to "Aerososl Treatment", pro_show_path(code: '94640'), :method => :post %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "EKG", pro_show_path(code: '93000'), :method => :post %></td>
+        <td></td>
+        <td></td>
       </tr>
       
 
@@ -165,14 +172,14 @@
       <th>Gastroenterology</th><td></td><td></td>
       </tr>
       <tr>
-        <td><%= link_to "Facility and Physician Fee", pro_show_path(code: 'FFPF'), :method => :post %></td>
+        <td><%= link_to "Facility/Physician Colon", pro_show_path(code: 'FFPF45378'), :method => :post %></td>
         <td><%= link_to "Endoscopy Colon/EGD", pro_show_path(code: 'FF4537843235'), :method => :post %></td>
-        <td><%= link_to "Colonoscopy", pro_show_path(code: '45378'), :method => :post %></td>
+        <td><%= link_to "Colonoscopy Physician", pro_show_path(code: '45378'), :method => :post %></td>
       </tr>
       <tr>
-        <td><%= link_to "Facility and Physician Fee", pro_show_path(code: 'FFPF4537843235'), :method => :post %></td>
-        <td><%= link_to "EGD", pro_show_path(code: '43235'), :method => :post %></td>
-        <td><%= link_to "Facility and Physician Fee", pro_show_path(code: 'FFPF43235'), :method => :post %></td>
+        <td><%= link_to "Facility/Physician Colon/EGD", pro_show_path(code: 'FFPF4537843235'), :method => :post %></td>
+        <td><%= link_to "EGD Physician", pro_show_path(code: '43235'), :method => :post %></td>
+        <td><%= link_to "Facility/Physician EGD", pro_show_path(code: 'FFPF43235'), :method => :post %></td>
       </tr>
       <tr>
         <td><%= link_to "Endoscopy Colon", pro_show_path(code: 'FF45378'), :method => :post %></td>
