@@ -1,0 +1,19 @@
+<div class="col-md-12 col-md-push-4">
+          <%= form_tag search_by_address_path, :method => 'get' do %>
+          <p>
+          <%= text_field_tag :address, params[:address] %>
+          <%= submit_tag "Search Providers by Address", :name => nil, :class => "btn btn-success btn-lg" %>
+          </p><br><br>
+          
+          <% end %>
+</div>
+
+<div class="col-md-12 col-md-push-4">
+          <%= form_tag search_by_name_path, :method => 'get' do %>
+          <p>
+          <%= text_field_tag :search, params[:search], placeholder: "" %>
+          <%= submit_tag "Search Providers by Name", :name => nil, :class => "btn btn-success btn-lg" %>
+          </p><br><br>
+          
+          <% end %>
+</div>
