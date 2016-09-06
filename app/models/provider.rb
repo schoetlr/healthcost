@@ -6,7 +6,8 @@ class Provider < ActiveRecord::Base
 	after_validation :reverse_geocode
 
 	has_many :procedures
-  # Include default devise modules. Others available are:
+  
+  # Including default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

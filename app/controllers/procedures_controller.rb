@@ -5,42 +5,36 @@ class ProceduresController < ApplicationController
 
 
   def index
-    @procedures = Procedure.all
-  if params[:search]
-    @procedures = Procedure.search(params[:search]).order("created_at DESC")
-  else
-    @procedures = Procedure.all.order('created_at DESC')
+    if params[:search]
+      @procedures = Procedure.search(params[:search]).order("created_at DESC")
+    elsif params[:code]
+      @procedures = Procedure.with_code(params[:code])
+    else
+      @procedures = Procedure.all.order('created_at DESC')
+    end
   end
-end
 
-  # GET /procedures/1
-  # GET /procedures/1.json
+  
   def show
     @procedure = Procedure.includes(:provider).find(params[:id])
   end
 
-  def pro_show
-    @code = params[:code]
-    @procedures = Procedure.where(:code => @code)
-  end
-
-  # GET /procedures/new
+  
   def new
     @provider = current_provider
-    @procedure = @provider.procedures.new(params[:id])          
+    @procedure = @provider.procedures.new(params[:id])
     respond_to do |format|
           format.html {render :new}
           format.json { head :ok}
         end
   end
 
-  # GET /procedures/1/edit
+  
   def edit
     @procedure = Procedure.includes(:provider).find(params[:id])
   end
 
-  # POST /procedures
-  # POST /procedures.json
+  
   def create
     @provider = current_provider
     @procedure = @provider.procedures.new(procedure_params)
@@ -58,10 +52,9 @@ end
     end
   end
 
-  # PATCH/PUT /procedures/1
-  # PATCH/PUT /procedures/1.json
+  
   def update
-        @procedure = Procedure.includes(:provider).find(params[:id])
+    @procedure = Procedure.includes(:provider).find(params[:id])
     respond_to do |format|
       if @procedure.update(procedure_params)
         format.html { redirect_to @procedure, notice: 'Procedure was successfully updated.' }
@@ -73,8 +66,7 @@ end
     end
   end
 
-  # DELETE /procedures/1
-  # DELETE /procedures/1.json
+  
   def destroy
     @procedure = Procedure.find(params[:id])
     @procedure.destroy
@@ -85,19 +77,20 @@ end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def find_procedure
-     @procedure = Procedure.find(params[:id])
-   end
+    
+  def find_procedure
+   @procedure = Procedure.find(params[:id])
+  end
 
-   def authorize_resource!
-     unless current_provider == @procedure.provider
-       raise Provider::NotAuthorized and return false
-     end
+  def authorize_resource!
+   unless current_provider == @procedure.provider
+     raise Provider::NotAuthorized and return false
    end
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def procedure_params
-      params.require(:procedure).permit(:name, :code, :cash_price, :insurance_price)
-    end
+  
+  def procedure_params
+    params.require(:procedure).permit(:name, :code, :cash_price, 
+                                      :insurance_price)
+  end
 end

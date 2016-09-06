@@ -1,8 +1,3 @@
-
-
-
-
-
 <div class="row">
   <div class="col-sm-12 col-sm-push-4">
     <h1>Procedures</h1>
@@ -10,38 +5,38 @@
 </div>
 <div class="row col-md-12">
 
-<table class="pro-show-table col-md-8 table-striped table bordered table-condensed">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Provider</th>
-      <th>Insurance Price</th>
-      <th>Cash Price</th>
-      <th>Price Description</th>
-      
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @procedures.each do |procedure| %>
+  <table class="pro-show-table col-md-8 table-striped table bordered table-condensed">
+    <thead>
       <tr>
-        <td><%= procedure.name %></td>
-        <td><%= procedure.provider.name %></td>
-        <td><%= procedure.insurance_price %></td>
-        <td><%= procedure.cash_price %></td>
-        <td><%= procedure.price_description %></td>
+        <th>Name</th>
+        <th>Provider</th>
+        <th>Insurance Price</th>
+        <th>Cash Price</th>
+        <th>Price Description</th>
         
-        <td><%= link_to 'Show', procedure %></td>
-        <% if provider_signed_in? %>
-        <td><%= link_to 'Edit', edit_procedure_path(procedure) %></td>
-        <td><%= link_to 'Destroy', procedure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @procedures.each do |procedure| %>
+        <tr>
+          <td><%= procedure.name %></td>
+          <td><%= procedure.provider.name %></td>
+          <td><%= procedure.insurance_price %></td>
+          <td><%= procedure.cash_price %></td>
+          <td><%= procedure.price_description %></td>
+          
+          <td><%= link_to 'Show', procedure %></td>
+          <% if provider_signed_in? %>
+          <td><%= link_to 'Edit', edit_procedure_path(procedure) %></td>
+          <td><%= link_to 'Destroy', procedure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
 
 
 </div>

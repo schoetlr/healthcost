@@ -1,4 +1,3 @@
-<%#= link_to "This Procedure", pro_show_path(@code => this_code) %>
 <div class="row">
   <div class="col-sm-12 col-sm-push-4">
     <h1>All Procedures</h1>
@@ -15,93 +14,93 @@
     <tbody>
       <tr><th>Emergency Room</th><td></td><td></td></tr>
       <tr>
-        <td><%= link_to "Emergency Room Level 1", pro_show_path(code: '99281'), :method => :post %></td>
-        <td><%= link_to "Emergency Room Level 2", pro_show_path(code: '99282'), :method => :post %></td>
-        <td><%= link_to "Emergency Room Level 3", pro_show_path(code: '99283'), :method => :post %></td>
+        <td><%= link_to "Emergency Room Level 1", procedures_path(code: '99281') %></td>
+        <td><%= link_to "Emergency Room Level 2", procedures_path(code: '99282') %></td>
+        <td><%= link_to "Emergency Room Level 3", procedures_path(code: '99283') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Emergency Room Level 4", pro_show_path(code: '99284'), :method => :post %></td>
-        <td><%= link_to "Emergency Room Level 5", pro_show_path(code: '99285'), :method => :post %></td>
-        <td><%= link_to "Emergency Room Critical Care", pro_show_path(code: '99291'), :method => :post %></td>
+        <td><%= link_to "Emergency Room Level 4", procedures_path(code: '99284') %></td>
+        <td><%= link_to "Emergency Room Level 5", procedures_path(code: '99285') %></td>
+        <td><%= link_to "Emergency Room Critical Care", procedures_path(code: '99291') %></td>
       </tr>
       <tr><th>Radiology</th><td></td><td></td></tr>
       <tr>
         
-        <td><%= link_to "CT Scan Abdomen w/Contrast Materials", pro_show_path(code: '74160'), :method => :post %></td>
-        <td><%= link_to "CT Scan Abdomen w/ & w/o Contrast Material", pro_show_path(code: '74170'), :method => :post %></td>
-        <td><%= link_to "EEG", pro_show_path(code: '95816'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdomen w/Contrast Materials", procedures_path(code: '74160') %></td>
+        <td><%= link_to "CT Scan Abdomen w/ & w/o Contrast Material", procedures_path(code: '74170') %></td>
+        <td><%= link_to "EEG", procedures_path(code: '95816') %></td>
       </tr>
       <tr>
-        <td><%= link_to "CT Scan Abdomen w/o Contrast Material", pro_show_path(code: '74150'), :method => :post %></td>
-        <td><%= link_to "CT Scan Abdomen and Pelvis w/Contrast Material", pro_show_path(code: '74177'), :method => :post %></td>
-        <td><%= link_to "CT Scan Abdomen and Pelvis w/o Contrast Material", pro_show_path(code: '74176'), :method => :post %></td>
+        <td><%= link_to "CT Scan Abdomen w/o Contrast Material", procedures_path(code: '74150') %></td>
+        <td><%= link_to "CT Scan Abdomen and Pelvis w/Contrast Material", procedures_path(code: '74177') %></td>
+        <td><%= link_to "CT Scan Abdomen and Pelvis w/o Contrast Material", procedures_path(code: '74176') %></td>
       </tr>
       <tr>
-        <td><%= link_to "CT Scan Head w/o Contrast Materials", pro_show_path(code: '70450'), :method => :post %></td>
-        <td><%= link_to "CT Scan Chest w/Contrast Materials", pro_show_path(code: '71260'), :method => :post %></td>
-        <td><%= link_to "CT Scan Chest w/o Contrast Material", pro_show_path(code: '74170'), :method => :post %></td>
+        <td><%= link_to "CT Scan Head w/o Contrast Materials", procedures_path(code: '70450') %></td>
+        <td><%= link_to "CT Scan Chest w/Contrast Materials", procedures_path(code: '71260') %></td>
+        <td><%= link_to "CT Scan Chest w/o Contrast Material", procedures_path(code: '74170') %></td>
       </tr>
       <tr>
-        <td><%= link_to "CT Scan Pelvis w/Contrast Material", pro_show_path(code: '72193'), :method => :post %></td>
-        <td><%= link_to "DXA Bone Density Study", pro_show_path(code: '77080'), :method => :post %></td>
-        <td><%= link_to "MRI Brain w/ & w/o Contrast Material", pro_show_path(code: '70553'), :method => :post %></td>
+        <td><%= link_to "CT Scan Pelvis w/Contrast Material", procedures_path(code: '72193') %></td>
+        <td><%= link_to "DXA Bone Density Study", procedures_path(code: '77080') %></td>
+        <td><%= link_to "MRI Brain w/ & w/o Contrast Material", procedures_path(code: '70553') %></td>
       </tr>
       
       <tr>
-        <td><%= link_to "MRI Breast DX", pro_show_path(code: '77059'), :method => :post %></td>
-        <td><%= link_to "MRI Cervical w/ & w/o", pro_show_path(code: '72156'), :method => :post %></td>
-        <td><%= link_to "MRI Lumbar w/ & w/o", pro_show_path(code: '72158'), :method => :post %></td>
+        <td><%= link_to "MRI Breast DX", procedures_path(code: '77059') %></td>
+        <td><%= link_to "MRI Cervical w/ & w/o", procedures_path(code: '72156') %></td>
+        <td><%= link_to "MRI Lumbar w/ & w/o", procedures_path(code: '72158') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Ultrasound Abdomen Single Organ", pro_show_path(code: '76705'), :method => :post %></td>
-        <td><%= link_to "Ultrasound Abdomen Complete", pro_show_path(code: '76700'), :method => :post %></td>
-        <td><%= link_to "Ultrasound Aorta", pro_show_path(code: '93978'), :method => :post %></td>
+        <td><%= link_to "Ultrasound Abdomen Single Organ", procedures_path(code: '76705') %></td>
+        <td><%= link_to "Ultrasound Abdomen Complete", procedures_path(code: '76700') %></td>
+        <td><%= link_to "Ultrasound Aorta", procedures_path(code: '93978') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Ultrasound Carotid", pro_show_path(code: '93880'), :method => :post %></td>
-        <td><%= link_to "Ultrasound Gallbladder", pro_show_path(code: '76705'), :method => :post %></td>
-        <td><%= link_to "Ultrasound Pelvis", pro_show_path(code: '76856'), :method => :post %></td>
+        <td><%= link_to "Ultrasound Carotid", procedures_path(code: '93880') %></td>
+        <td><%= link_to "Ultrasound Gallbladder", procedures_path(code: '76705') %></td>
+        <td><%= link_to "Ultrasound Pelvis", procedures_path(code: '76856') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Ultrasound Pelivs Transvag Non-OB", pro_show_path(code: '76830'), :method => :post %></td>
-        <td><%= link_to "Ultrasound Renal", pro_show_path(code: '76775'), :method => :post %></td>
-        <td><%= link_to "Ultrasound Testicular", pro_show_path(code: '76870'), :method => :post %></td>
+        <td><%= link_to "Ultrasound Pelivs Transvag Non-OB", procedures_path(code: '76830') %></td>
+        <td><%= link_to "Ultrasound Renal", procedures_path(code: '76775') %></td>
+        <td><%= link_to "Ultrasound Testicular", procedures_path(code: '76870') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Ultrasound Venous LE", pro_show_path(code: '93971'), :method => :post %></td>
-        <td><%= link_to "X-Ray Abdomen", pro_show_path(code: '74022'), :method => :post %></td>
-        <td><%= link_to "X-Ray Ankle", pro_show_path(code: '73610'), :method => :post %></td>
+        <td><%= link_to "Ultrasound Venous LE", procedures_path(code: '93971') %></td>
+        <td><%= link_to "X-Ray Abdomen", procedures_path(code: '74022') %></td>
+        <td><%= link_to "X-Ray Ankle", procedures_path(code: '73610') %></td>
       </tr>
       <tr>
-        <td><%= link_to "X-Ray Cervical", pro_show_path(code: '72050'), :method => :post %></td>
-        <td><%= link_to "X-Ray Chest 2 View", pro_show_path(code: '71020'), :method => :post %></td>
-        <td><%= link_to "X-Ray Elbow", pro_show_path(code: '73080'), :method => :post %></td>
+        <td><%= link_to "X-Ray Cervical", procedures_path(code: '72050') %></td>
+        <td><%= link_to "X-Ray Chest 2 View", procedures_path(code: '71020') %></td>
+        <td><%= link_to "X-Ray Elbow", procedures_path(code: '73080') %></td>
       </tr>
       <tr>
-        <td><%= link_to "X-Ray Foot 3+ View", pro_show_path(code: '73630'), :method => :post %></td>
-        <td><%= link_to "X-Ray Hand 3+ View", pro_show_path(code: '73130'), :method => :post %></td>
-        <td><%= link_to "X-Ray Hip 2+ View", pro_show_path(code: '73530'), :method => :post %></td>
+        <td><%= link_to "X-Ray Foot 3+ View", procedures_path(code: '73630') %></td>
+        <td><%= link_to "X-Ray Hand 3+ View", procedures_path(code: '73130') %></td>
+        <td><%= link_to "X-Ray Hip 2+ View", procedures_path(code: '73530') %></td>
       </tr>
       <tr>
-        <td><%= link_to "X-Ray Knee 1-2 View", pro_show_path(code: '73564'), :method => :post %></td>
-        <td><%= link_to "X-Ray Knee 3+ View", pro_show_path(code: '73562'), :method => :post %></td>
-        <td><%= link_to "X-Ray Lumbar", pro_show_path(code: '72100'), :method => :post %></td>
+        <td><%= link_to "X-Ray Knee 1-2 View", procedures_path(code: '73564') %></td>
+        <td><%= link_to "X-Ray Knee 3+ View", procedures_path(code: '73562') %></td>
+        <td><%= link_to "X-Ray Lumbar", procedures_path(code: '72100') %></td>
       </tr>
       <tr>
-        <td><%= link_to "X-Ray Shoulder", pro_show_path(code: '73030'), :method => :post %></td>
-        <td><%= link_to "X-Ray Wrist", pro_show_path(code: '73110'), :method => :post %></td>
+        <td><%= link_to "X-Ray Shoulder", procedures_path(code: '73030') %></td>
+        <td><%= link_to "X-Ray Wrist", procedures_path(code: '73110') %></td>
         <td></td>
       </tr>
       
       <tr>
-        <td><%= link_to "CT Scan Pulmonary/Angiogram", pro_show_path(code: '71275'), :method => :post %></td>
-        <td><%= link_to "CT Scan Low Dose Cancer Screening", pro_show_path(code: '71250LD'), :method => :post %></td>
+        <td><%= link_to "CT Scan Pulmonary/Angiogram", procedures_path(code: '71275') %></td>
+        <td><%= link_to "CT Scan Low Dose Cancer Screening", procedures_path(code: '71250LD') %></td>
         <td></td>
       </tr>
       <tr>
-        <td><%= link_to "MRI Lumbar WO", pro_show_path(code: '72148'), :method => :post %></td>
-        <td><%= link_to "Mammogram Screen", pro_show_path(code: '77057'), :method => :post %></td>
-        <td><%= link_to "MRI Brain W", pro_show_path(code: '70552'), :method => :post %></td>
+        <td><%= link_to "MRI Lumbar WO", procedures_path(code: '72148') %></td>
+        <td><%= link_to "Mammogram Screen", procedures_path(code: '77057') %></td>
+        <td><%= link_to "MRI Brain W", procedures_path(code: '70552') %></td>
       </tr>
       
       
@@ -109,29 +108,29 @@
       <th>Cardiology Testing</th><td></td><td></td></tr>
       <tr>
         
-        <td><%= link_to "Echocardiography", pro_show_path(code: '93307'), :method => :post %></td>
-        <td><%= link_to "Echocardiography Stress", pro_show_path(code: '93350'), :method => :post %></td>
-        <td><%= link_to "Holter Record", pro_show_path(code: '93225'), :method => :post %></td>
+        <td><%= link_to "Echocardiography", procedures_path(code: '93307') %></td>
+        <td><%= link_to "Echocardiography Stress", procedures_path(code: '93350') %></td>
+        <td><%= link_to "Holter Record", procedures_path(code: '93225') %></td>
       </tr>
 
       <tr>
         
-        <td><%= link_to "Holter Analysis", pro_show_path(code: '93226'), :method => :post %></td>
-        <td><%= link_to "Myocardial Perfusion Spect", pro_show_path(code: '78452'), :method => :post %></td>
-        <td><%= link_to "Stress Test", pro_show_path(code: '93017'), :method => :post %></td>
+        <td><%= link_to "Holter Analysis", procedures_path(code: '93226') %></td>
+        <td><%= link_to "Myocardial Perfusion Spect", procedures_path(code: '78452') %></td>
+        <td><%= link_to "Stress Test", procedures_path(code: '93017') %></td>
       </tr>
       
 
       <tr>
-      <td><%= link_to "EKG", pro_show_path(code: '93000'), :method => :post %></td><td></td><td></td>
+      <td><%= link_to "EKG", procedures_path(code: '93000') %></td><td></td><td></td>
       </tr>
       
       <th>Pulmonology Testing</th><td></td><td></td></tr>
       <tr>
         
-        <td><%= link_to "Sleep Study Unattended", pro_show_path(code: '95806'), :method => :post %></td>
-        <td><%= link_to "Spirometry", pro_show_path(code: '94010'), :method => :post %></td>
-        <td><%= link_to "Aerososl Treatment", pro_show_path(code: '94640'), :method => :post %></td>
+        <td><%= link_to "Sleep Study Unattended", procedures_path(code: '95806') %></td>
+        <td><%= link_to "Spirometry", procedures_path(code: '94010') %></td>
+        <td><%= link_to "Aerososl Treatment", procedures_path(code: '94640') %></td>
       </tr>
       
       
@@ -142,24 +141,24 @@
       <th>Physical Therapy</th><td></td><td></td>
       </tr>
       <tr>
-        <td><%= link_to "E-Stim Therapy", pro_show_path(code: '97014'), :method => :post %></td>
-        <td><%= link_to "Physical Therapy First Visit", pro_show_path(code: '97001'), :method => :post %></td>
-        <td><%= link_to "Iontophoresis", pro_show_path(code: '97033'), :method => :post %></td>
+        <td><%= link_to "E-Stim Therapy", procedures_path(code: '97014') %></td>
+        <td><%= link_to "Physical Therapy First Visit", procedures_path(code: '97001') %></td>
+        <td><%= link_to "Iontophoresis", procedures_path(code: '97033') %></td>
       </tr>
 
       <tr>
-        <td><%= link_to "Gait 15 Min", pro_show_path(code: '97116'), :method => :post %></td>
-        <td><%= link_to "Ther Activity", pro_show_path(code: '97530'), :method => :post %></td>
-        <td><%= link_to "Ther Ex 15 Min", pro_show_path(code: '97110'), :method => :post %></td>
+        <td><%= link_to "Gait 15 Min", procedures_path(code: '97116') %></td>
+        <td><%= link_to "Ther Activity", procedures_path(code: '97530') %></td>
+        <td><%= link_to "Ther Ex 15 Min", procedures_path(code: '97110') %></td>
       </tr>
 
       <tr>
-        <td><%= link_to "Man Tech 15 Min", pro_show_path(code: '97140'), :method => :post %></td>
-        <td><%= link_to "Re-Eval", pro_show_path(code: '97002'), :method => :post %></td>
-        <td><%= link_to "Neuromuscular Re-Ed", pro_show_path(code: '97112'), :method => :post %></td>
+        <td><%= link_to "Man Tech 15 Min", procedures_path(code: '97140') %></td>
+        <td><%= link_to "Re-Eval", procedures_path(code: '97002') %></td>
+        <td><%= link_to "Neuromuscular Re-Ed", procedures_path(code: '97112') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Ultrasound 15 Min", pro_show_path(code: '97035'), :method => :post %></td>
+        <td><%= link_to "Ultrasound 15 Min", procedures_path(code: '97035') %></td>
         <td></td>
         <td></td>
         
@@ -168,37 +167,37 @@
       <th>Gastroenterology</th><td></td><td></td>
       </tr>
       <tr>
-        <td><%= link_to "Facility/Physician Colon", pro_show_path(code: 'FFPF45378'), :method => :post %></td>
-        <td><%= link_to "Endoscopy Colon/EGD", pro_show_path(code: 'FF4537843235'), :method => :post %></td>
-        <td><%= link_to "Colonoscopy Physician", pro_show_path(code: '45378'), :method => :post %></td>
+        <td><%= link_to "Facility/Physician Colon", procedures_path(code: 'FFPF45378') %></td>
+        <td><%= link_to "Endoscopy Colon/EGD", procedures_path(code: 'FF4537843235') %></td>
+        <td><%= link_to "Colonoscopy Physician", procedures_path(code: '45378') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Facility/Physician Colon/EGD", pro_show_path(code: 'FFPF4537843235'), :method => :post %></td>
-        <td><%= link_to "EGD Physician", pro_show_path(code: '43235'), :method => :post %></td>
-        <td><%= link_to "Facility/Physician EGD", pro_show_path(code: 'FFPF43235'), :method => :post %></td>
+        <td><%= link_to "Facility/Physician Colon/EGD", procedures_path(code: 'FFPF4537843235') %></td>
+        <td><%= link_to "EGD Physician", procedures_path(code: '43235') %></td>
+        <td><%= link_to "Facility/Physician EGD", procedures_path(code: 'FFPF43235') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Endoscopy Colon", pro_show_path(code: 'FF45378'), :method => :post %></td>
-        <td><%= link_to "Endoscopy/EGD", pro_show_path(code: 'FF43235'), :method => :post %></td>
+        <td><%= link_to "Endoscopy Colon", procedures_path(code: 'FF45378') %></td>
+        <td><%= link_to "Endoscopy/EGD", procedures_path(code: 'FF43235') %></td>
         <td></td>
       </tr>
       <tr>
-        <td><%= link_to "GI Office Visit Level 2", pro_show_path(code: 'GI99213'), :method => :post %></td>
-        <td><%= link_to "GI Office Visit Level 3", pro_show_path(code: 'GI99213'), :method => :post %></td>
-        <td><%= link_to "GI Office Visit Level 4", pro_show_path(code: 'GI99214'), :method => :post %></td>
+        <td><%= link_to "GI Office Visit Level 2", procedures_path(code: 'GI99213') %></td>
+        <td><%= link_to "GI Office Visit Level 3", procedures_path(code: 'GI99213') %></td>
+        <td><%= link_to "GI Office Visit Level 4", procedures_path(code: 'GI99214') %></td>
       </tr>
       <tr>
-        <td><%= link_to "GI Office Visit Level 5", pro_show_path(code: 'GI99215'), :method => :post %></td>
-        <td><%= link_to "GI Office Visit Level 3 NP", pro_show_path(code: 'GI99203'), :method => :post %></td>
-        <td><%= link_to "GI Office Visit Level 4 NP", pro_show_path(code: 'GI99204'), :method => :post %></td>
+        <td><%= link_to "GI Office Visit Level 5", procedures_path(code: 'GI99215') %></td>
+        <td><%= link_to "GI Office Visit Level 3 NP", procedures_path(code: 'GI99203') %></td>
+        <td><%= link_to "GI Office Visit Level 4 NP", procedures_path(code: 'GI99204') %></td>
       </tr>
       <tr>
-        <td><%= link_to "GI Consult OP L2", pro_show_path(code: 'GI99242'), :method => :post %></td>
-        <td><%= link_to "GI Consult OP L3", pro_show_path(code: 'GI99243'), :method => :post %></td>
-        <td><%= link_to "GI Consult OP L4", pro_show_path(code: 'GI99244'), :method => :post %></td>
+        <td><%= link_to "GI Consult OP L2", procedures_path(code: 'GI99242') %></td>
+        <td><%= link_to "GI Consult OP L3", procedures_path(code: 'GI99243') %></td>
+        <td><%= link_to "GI Consult OP L4", procedures_path(code: 'GI99244') %></td>
       </tr>
       <tr>
-        <td><%= link_to "GI Consult OP L5", pro_show_path(code: 'GI99245'), :method => :post %></td>
+        <td><%= link_to "GI Consult OP L5", procedures_path(code: 'GI99245') %></td>
         <td></td>
         <td></td>
       </tr>
@@ -207,77 +206,77 @@
       <th>Primary Care</th><td></td><td></td>
       </tr>
       <tr>
-        <td><%= link_to "HemoglobinA1C", pro_show_path(code: '83036'), :method => :post %></td>
-        <td><%= link_to "Vaccine TdaP", pro_show_path(code: '90715'), :method => :post %></td>
-        <td><%= link_to "Vaccine/Medication Administration First", pro_show_path(code: '90471'), :method => :post %></td>
+        <td><%= link_to "HemoglobinA1C", procedures_path(code: '83036') %></td>
+        <td><%= link_to "Vaccine TdaP", procedures_path(code: '90715') %></td>
+        <td><%= link_to "Vaccine/Medication Administration First", procedures_path(code: '90471') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Vaccine/Medication Administration Add", pro_show_path(code: '90472'), :method => :post %></td>
-        <td><%= link_to "Earwax Removal", pro_show_path(code: '69210'), :method => :post %></td>
-        <td><%= link_to "EKG", pro_show_path(code: '93000'), :method => :post %></td>
+        <td><%= link_to "Vaccine/Medication Administration Add", procedures_path(code: '90472') %></td>
+        <td><%= link_to "Earwax Removal", procedures_path(code: '69210') %></td>
+        <td><%= link_to "EKG", procedures_path(code: '93000') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Fasting Blood Sugar Fingerstick", pro_show_path(code: '82962'), :method => :post %></td>
-        <td><%= link_to "Vaccine Hepatitis A Adult", pro_show_path(code: '90632'), :method => :post %></td>
-        <td><%= link_to "Vaccine Hepatitis B Adult", pro_show_path(code: '90746'), :method => :post %></td>
+        <td><%= link_to "Fasting Blood Sugar Fingerstick", procedures_path(code: '82962') %></td>
+        <td><%= link_to "Vaccine Hepatitis A Adult", procedures_path(code: '90632') %></td>
+        <td><%= link_to "Vaccine Hepatitis B Adult", procedures_path(code: '90746') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Vaccine Human Papilloma virus", pro_show_path(code: '90649'), :method => :post %></td>
-        <td><%= link_to "Vaccine Influenza Trivalent", pro_show_path(code: '90658'), :method => :post %></td>
-        <td><%= link_to "Joint Injection/Drainage Med", pro_show_path(code: '20605'), :method => :post %></td>
+        <td><%= link_to "Vaccine Human Papilloma virus", procedures_path(code: '90649') %></td>
+        <td><%= link_to "Vaccine Influenza Trivalent", procedures_path(code: '90658') %></td>
+        <td><%= link_to "Joint Injection/Drainage Med", procedures_path(code: '20605') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Joint Injection/Drainage Leg", pro_show_path(code: '20610'), :method => :post %></td>
-        <td><%= link_to "Medical Wellness Exam 0-12 Month", pro_show_path(code: '99391'), :method => :post %></td>
-        <td><%= link_to "Medical Wellness Exam 5-11 Year", pro_show_path(code: '99393'), :method => :post %></td>
+        <td><%= link_to "Joint Injection/Drainage Leg", procedures_path(code: '20610') %></td>
+        <td><%= link_to "Medical Wellness Exam 0-12 Month", procedures_path(code: '99391') %></td>
+        <td><%= link_to "Medical Wellness Exam 5-11 Year", procedures_path(code: '99393') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Medical Wellness Exam 11-12 Year", pro_show_path(code: '99394'), :method => :post %></td>
-        <td><%= link_to "Medical Wellness Exam 18-39 Year", pro_show_path(code: '99395'), :method => :post %></td>
-        <td><%= link_to "Medical Wellness Exam 40-65 Year", pro_show_path(code: '99396'), :method => :post %></td>
+        <td><%= link_to "Medical Wellness Exam 11-12 Year", procedures_path(code: '99394') %></td>
+        <td><%= link_to "Medical Wellness Exam 18-39 Year", procedures_path(code: '99395') %></td>
+        <td><%= link_to "Medical Wellness Exam 40-65 Year", procedures_path(code: '99396') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Medical Wellness Exam >65 Year", pro_show_path(code: '99397'), :method => :post %></td>
-        <td><%= link_to "Vaccine Meningococcal Meningitis", pro_show_path(code: '90734'), :method => :post %></td>
-        <td><%= link_to "Vaccine MMR", pro_show_path(code: '90707'), :method => :post %></td>
+        <td><%= link_to "Medical Wellness Exam >65 Year", procedures_path(code: '99397') %></td>
+        <td><%= link_to "Vaccine Meningococcal Meningitis", procedures_path(code: '90734') %></td>
+        <td><%= link_to "Vaccine MMR", procedures_path(code: '90707') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Aerosol Treatment", pro_show_path(code: '94640'), :method => :post %></td>
-        <td><%= link_to "Office Visit Level 2 Established", pro_show_path(code: '99212'), :method => :post %></td>
-        <td><%= link_to "Office Visit Level 3 Established", pro_show_path(code: '99213'), :method => :post %></td>
+        <td><%= link_to "Aerosol Treatment", procedures_path(code: '94640') %></td>
+        <td><%= link_to "Office Visit Level 2 Established", procedures_path(code: '99212') %></td>
+        <td><%= link_to "Office Visit Level 3 Established", procedures_path(code: '99213') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Office Visit Level 4 Established", pro_show_path(code: '99214'), :method => :post %></td>
-        <td><%= link_to "Office Visit Level 5 Established", pro_show_path(code: '99215'), :method => :post %></td>
-        <td><%= link_to "Pregnancy Test Urine", pro_show_path(code: '81025'), :method => :post %></td>
+        <td><%= link_to "Office Visit Level 4 Established", procedures_path(code: '99214') %></td>
+        <td><%= link_to "Office Visit Level 5 Established", procedures_path(code: '99215') %></td>
+        <td><%= link_to "Pregnancy Test Urine", procedures_path(code: '81025') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Injection Phenergan", pro_show_path(code: 'J2250'), :method => :post %></td>
-        <td><%= link_to "Vaccine Pneumovax Pneumococcal 23", pro_show_path(code: '90732'), :method => :post %></td>
-        <td><%= link_to "Vaccine Polio IPV", pro_show_path(code: '90713'), :method => :post %></td>
+        <td><%= link_to "Injection Phenergan", procedures_path(code: 'J2250') %></td>
+        <td><%= link_to "Vaccine Pneumovax Pneumococcal 23", procedures_path(code: '90732') %></td>
+        <td><%= link_to "Vaccine Polio IPV", procedures_path(code: '90713') %></td>
       </tr>
       <tr>
-        <td><%= link_to "PROTIME", pro_show_path(code: '85610'), :method => :post %></td>
-        <td><%= link_to "Vaccine Prevnar Pneumococcal 13", pro_show_path(code: '90670'), :method => :post %></td>
-        <td><%= link_to "Shave Lesion Trunk 0.5cm", pro_show_path(code: '11300'), :method => :post %></td>
+        <td><%= link_to "PROTIME", procedures_path(code: '85610') %></td>
+        <td><%= link_to "Vaccine Prevnar Pneumococcal 13", procedures_path(code: '90670') %></td>
+        <td><%= link_to "Shave Lesion Trunk 0.5cm", procedures_path(code: '11300') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Shave Lesion Face 0.5cm", pro_show_path(code: '99214'), :method => :post %></td>
+        <td><%= link_to "Shave Lesion Face 0.5cm", procedures_path(code: '99214') %></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
-        <td><%= link_to "Injection Steriod 40mg", pro_show_path(code: 'J1030'), :method => :post %></td>
-        <td><%= link_to "TB Skin Test", pro_show_path(code: '86580'), :method => :post %></td>
-        <td><%= link_to "Vaccine Td", pro_show_path(code: '90714'), :method => :post %></td>
+        <td><%= link_to "Injection Steriod 40mg", procedures_path(code: 'J1030') %></td>
+        <td><%= link_to "TB Skin Test", procedures_path(code: '86580') %></td>
+        <td><%= link_to "Vaccine Td", procedures_path(code: '90714') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Injection Toradol 15mg", pro_show_path(code: 'J1885'), :method => :post %></td>
-        <td><%= link_to "Vaccine Varicellla Chicken Pox", pro_show_path(code: '90716'), :method => :post %></td>
-        <td><%= link_to "WART Treatment Cryotherapy", pro_show_path(code: '17110'), :method => :post %></td>
+        <td><%= link_to "Injection Toradol 15mg", procedures_path(code: 'J1885') %></td>
+        <td><%= link_to "Vaccine Varicellla Chicken Pox", procedures_path(code: '90716') %></td>
+        <td><%= link_to "WART Treatment Cryotherapy", procedures_path(code: '17110') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Vaccine Shingles", pro_show_path(code: '90736'), :method => :post %></td>
+        <td><%= link_to "Vaccine Shingles", procedures_path(code: '90736') %></td>
         <td></td>
         <td></td>
       </tr>
@@ -285,58 +284,58 @@
       <th>Labratory Services</th><td></td><td></td>
       </tr>
       <tr>
-        <td><%= link_to "BRCA1+2 SEQ+ COM", pro_show_path(code: '81211'), :method => :post %></td>
-        <td><%= link_to "Amylase", pro_show_path(code: '82150'), :method => :post %></td>
-        <td><%= link_to "Blood Culture", pro_show_path(code: '87040'), :method => :post %></td>
+        <td><%= link_to "BRCA1+2 SEQ+ COM", procedures_path(code: '81211') %></td>
+        <td><%= link_to "Amylase", procedures_path(code: '82150') %></td>
+        <td><%= link_to "Blood Culture", procedures_path(code: '87040') %></td>
       </tr>
       </tr>
       <tr>
-        <td><%= link_to "ABO Blood Typing", pro_show_path(code: '81211'), :method => :post %></td>
-        <td><%= link_to "BRCA1+2 UNCOM", pro_show_path(code: '81213'), :method => :post %></td>
-        <td><%= link_to "HGB A1C", pro_show_path(code: '83036'), :method => :post %></td>
+        <td><%= link_to "ABO Blood Typing", procedures_path(code: '81211') %></td>
+        <td><%= link_to "BRCA1+2 UNCOM", procedures_path(code: '81213') %></td>
+        <td><%= link_to "HGB A1C", procedures_path(code: '83036') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Blood Gas Arterial", pro_show_path(code: '82805'), :method => :post %></td>
-        <td><%= link_to "BNP", pro_show_path(code: '83880'), :method => :post %></td>
-        <td><%= link_to "CBC With Diff", pro_show_path(code: '85025'), :method => :post %></td>
+        <td><%= link_to "Blood Gas Arterial", procedures_path(code: '82805') %></td>
+        <td><%= link_to "BNP", procedures_path(code: '83880') %></td>
+        <td><%= link_to "CBC With Diff", procedures_path(code: '85025') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Chem Panel Basic", pro_show_path(code: '80048'), :method => :post %></td>
-        <td><%= link_to "Chem Panel Complete", pro_show_path(code: '80053'), :method => :post %></td>
-        <td><%= link_to "CK Total", pro_show_path(code: '82550'), :method => :post %></td>
+        <td><%= link_to "Chem Panel Basic", procedures_path(code: '80048') %></td>
+        <td><%= link_to "Chem Panel Complete", procedures_path(code: '80053') %></td>
+        <td><%= link_to "CK Total", procedures_path(code: '82550') %></td>
       </tr>
       <tr>
-        <td><%= link_to "CK MB Fraction", pro_show_path(code: '82553'), :method => :post %></td>
-        <td><%= link_to "Urine Culture", pro_show_path(code: '87086'), :method => :post %></td>
-        <td><%= link_to "Hematocrit", pro_show_path(code: '85018'), :method => :post %></td>
+        <td><%= link_to "CK MB Fraction", procedures_path(code: '82553') %></td>
+        <td><%= link_to "Urine Culture", procedures_path(code: '87086') %></td>
+        <td><%= link_to "Hematocrit", procedures_path(code: '85018') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Hemoglobin", pro_show_path(code: '85014'), :method => :post %></td>
-        <td><%= link_to "Hemoglobin A1C", pro_show_path(code: '83036'), :method => :post %></td>
-        <td><%= link_to "Hepatic Function Panel", pro_show_path(code: '80076'), :method => :post %></td>
+        <td><%= link_to "Hemoglobin", procedures_path(code: '85014') %></td>
+        <td><%= link_to "Hemoglobin A1C", procedures_path(code: '83036') %></td>
+        <td><%= link_to "Hepatic Function Panel", procedures_path(code: '80076') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Lipase", pro_show_path(code: '83690'), :method => :post %></td>
-        <td><%= link_to "Lipid Panel", pro_show_path(code: '80061'), :method => :post %></td>
-        <td><%= link_to "Magnesium", pro_show_path(code: '83735'), :method => :post %></td>
+        <td><%= link_to "Lipase", procedures_path(code: '83690') %></td>
+        <td><%= link_to "Lipid Panel", procedures_path(code: '80061') %></td>
+        <td><%= link_to "Magnesium", procedures_path(code: '83735') %></td>
       </tr>
       <tr>
-        <td><%= link_to "PAP", pro_show_path(code: '88142'), :method => :post %></td>
-        <td><%= link_to "Phosphorous", pro_show_path(code: '84100'), :method => :post %></td>
-        <td><%= link_to "Protime", pro_show_path(code: '85610'), :method => :post %></td>
+        <td><%= link_to "PAP", procedures_path(code: '88142') %></td>
+        <td><%= link_to "Phosphorous", procedures_path(code: '84100') %></td>
+        <td><%= link_to "Protime", procedures_path(code: '85610') %></td>
       </tr>
       <tr>
-        <td><%= link_to "PSA", pro_show_path(code: '84153'), :method => :post %></td>
-        <td><%= link_to "Renal Panel", pro_show_path(code: '80069'), :method => :post %></td>
-        <td><%= link_to "Sedimentation Rate", pro_show_path(code: '85652'), :method => :post %></td>
+        <td><%= link_to "PSA", procedures_path(code: '84153') %></td>
+        <td><%= link_to "Renal Panel", procedures_path(code: '80069') %></td>
+        <td><%= link_to "Sedimentation Rate", procedures_path(code: '85652') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Troponin", pro_show_path(code: '84484'), :method => :post %></td>
-        <td><%= link_to "TSH", pro_show_path(code: '84443'), :method => :post %></td>
-        <td><%= link_to "Urine with Micro", pro_show_path(code: '81015'), :method => :post %></td>
+        <td><%= link_to "Troponin", procedures_path(code: '84484') %></td>
+        <td><%= link_to "TSH", procedures_path(code: '84443') %></td>
+        <td><%= link_to "Urine with Micro", procedures_path(code: '81015') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Venipuncture", pro_show_path(code: '36500'), :method => :post %></td>
+        <td><%= link_to "Venipuncture", procedures_path(code: '36500') %></td>
         <td></td>
         <td></td>
       </tr>
@@ -345,44 +344,44 @@
       <th>Hospital Services</th><td></td><td></td>
       </tr>
       <tr>
-        <td><%= link_to "ER Level 1", pro_show_path(code: '99281'), :method => :post %></td>
-        <td><%= link_to "ER Level 2", pro_show_path(code: '99282'), :method => :post %></td>
-        <td><%= link_to "ER Level 3", pro_show_path(code: '99283'), :method => :post %></td>
+        <td><%= link_to "ER Level 1", procedures_path(code: '99281') %></td>
+        <td><%= link_to "ER Level 2", procedures_path(code: '99282') %></td>
+        <td><%= link_to "ER Level 3", procedures_path(code: '99283') %></td>
       </tr>
       <tr>
-        <td><%= link_to "ER Level 4", pro_show_path(code: '99284'), :method => :post %></td>
-        <td><%= link_to "ER Level 5", pro_show_path(code: '99285'), :method => :post %></td>
-        <td><%= link_to "ER CC", pro_show_path(code: '99291'), :method => :post %></td>
+        <td><%= link_to "ER Level 4", procedures_path(code: '99284') %></td>
+        <td><%= link_to "ER Level 5", procedures_path(code: '99285') %></td>
+        <td><%= link_to "ER CC", procedures_path(code: '99291') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Facility Coronary Angiogram", pro_show_path(code: 'FF93458'), :method => :post %></td>
-        <td><%= link_to "Facility Cardioversion", pro_show_path(code: 'FF92960'), :method => :post %></td>
-        <td><%= link_to "Hospital Semi-Private", pro_show_path(code: 'HSP'), :method => :post %></td>
+        <td><%= link_to "Facility Coronary Angiogram", procedures_path(code: 'FF93458') %></td>
+        <td><%= link_to "Facility Cardioversion", procedures_path(code: 'FF92960') %></td>
+        <td><%= link_to "Hospital Semi-Private", procedures_path(code: 'HSP') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Newborn Nursery", pro_show_path(code: 'NN'), :method => :post %></td>
-        <td><%= link_to "Newborn Nursery Special Care", pro_show_path(code: 'NNSC'), :method => :post %></td>
-        <td><%= link_to "Newborn Nursery Intermediate Care", pro_show_path(code: 'NNIC'), :method => :post %></td>
+        <td><%= link_to "Newborn Nursery", procedures_path(code: 'NN') %></td>
+        <td><%= link_to "Newborn Nursery Special Care", procedures_path(code: 'NNSC') %></td>
+        <td><%= link_to "Newborn Nursery Intermediate Care", procedures_path(code: 'NNIC') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Newborn Nursery ICU", pro_show_path(code: 'NNICU'), :method => :post %></td>
-        <td><%= link_to "Hospital Intermediate Care", pro_show_path(code: 'HI'), :method => :post %></td>
-        <td><%= link_to "Hospital Intermediate Care Telemetry", pro_show_path(code: 'HIT'), :method => :post %></td>
+        <td><%= link_to "Newborn Nursery ICU", procedures_path(code: 'NNICU') %></td>
+        <td><%= link_to "Hospital Intermediate Care", procedures_path(code: 'HI') %></td>
+        <td><%= link_to "Hospital Intermediate Care Telemetry", procedures_path(code: 'HIT') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Hospital Adult ICU", pro_show_path(code: 'HAICU'), :method => :post %></td>
-        <td><%= link_to "Psychiatric Semi-Private", pro_show_path(code: 'PSP'), :method => :post %></td>
-        <td><%= link_to "Antepartum Semi-Private", pro_show_path(code: 'APSP'), :method => :post %></td>
+        <td><%= link_to "Hospital Adult ICU", procedures_path(code: 'HAICU') %></td>
+        <td><%= link_to "Psychiatric Semi-Private", procedures_path(code: 'PSP') %></td>
+        <td><%= link_to "Antepartum Semi-Private", procedures_path(code: 'APSP') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Minor Surgery 15 Min", pro_show_path(code: 'MS15'), :method => :post %></td>
-        <td><%= link_to "Minor Surgery Add Min", pro_show_path(code: 'MSADD1'), :method => :post %></td>
-        <td><%= link_to "Major Surgery 15 Min", pro_show_path(code: 'MAS15'), :method => :post %></td>
+        <td><%= link_to "Minor Surgery 15 Min", procedures_path(code: 'MS15') %></td>
+        <td><%= link_to "Minor Surgery Add Min", procedures_path(code: 'MSADD1') %></td>
+        <td><%= link_to "Major Surgery 15 Min", procedures_path(code: 'MAS15') %></td>
       </tr>
       <tr>
-        <td><%= link_to "Major Surgery Add Min", pro_show_path(code: 'MASADD1'), :method => :post %></td>
-        <td><%= link_to "Complex Surgery 15 Min", pro_show_path(code: 'COS15'), :method => :post %></td>
-        <td><%= link_to "Complex Surgery Add Min", pro_show_path(code: 'COSADD1'), :method => :post %></td>
+        <td><%= link_to "Major Surgery Add Min", procedures_path(code: 'MASADD1') %></td>
+        <td><%= link_to "Complex Surgery 15 Min", procedures_path(code: 'COS15') %></td>
+        <td><%= link_to "Complex Surgery Add Min", procedures_path(code: 'COSADD1') %></td>
       </tr>
 
       </tbody>

@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   resources :reviews
 
   devise_for :providers
+  
   devise_scope :provider do
-  get "/sign_up" => "devise/registrations#new"
+    get "/sign_up" => "devise/registrations#new"
   end
   
   resources :procedures 
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
      
 
   get "/procedure_list" => "static_pages#procedure_list"
-  post "/pro_show" => "procedures#pro_show"
+
   get "/faq" => "static_pages#faq"
   get "/search_by_name" => "providers#search_by_name"
   get "/search_by_address" => "providers#search_by_address"
