@@ -3,11 +3,11 @@ class Admin::ProceduresController < AdminController
     if params[:search]
       @procedures = Procedure.search(params[:search]).order("created_at DESC")
     elsif params[:code]
-      @procedures = Procedure.with_code(params[:code])
       set_provider(params[:provider_id])
+      @procedures = @provider.procedures.with_code(params[:code])
     else
-      @procedures = Procedure.all.order('created_at DESC')
       set_provider(params[:provider_id])
+      @procedures = @provider.procedures.order('created_at DESC')
     end
   end
 
