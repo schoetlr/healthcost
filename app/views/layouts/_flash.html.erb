@@ -1,0 +1,14 @@
+<% if flash[:success] %>
+  <div class="row">
+    <div class="col-xs-12 alert alert-success">
+    <%= flash[:success] %>
+    </div>
+  </div>
+<% elsif flash[:error] %>
+  <div class="row">
+    <div class="col-xs-12 alert alert-danger">
+      <%= flash[:error] %>
+    </div>
+  </div>
+
+<% end %>

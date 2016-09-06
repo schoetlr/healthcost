@@ -1,0 +1,34 @@
+<div class="col-md-12 col-md-push-4">
+          <%= form_tag search_by_address_path, :method => 'get' do %>
+          <p>
+          <%= text_field_tag :address, params[:address] %>
+          <%= submit_tag "Search Providers by Address", :name => nil, :class => "btn btn-success btn-lg" %>
+          </p><% end %>
+          <br><br>
+          
+          
+</div>
+
+<div class="col-md-12 col-md-push-4">
+          <%= form_tag providers_path, :method => 'get' do %>
+          <p>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Providers" %>
+          <%= submit_tag "Search Providers by Name", :class => "btn btn-success btn-lg" %>
+          </p><% end %>
+          <br><br>
+          
+          
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+   <h1>New Procedure for:</h1>
+  </div>
+</div>
+
+<% @providers.each do |provider| %>
+      
+        <h3><%= link_to provider.name, new_admin_provider_procedure_path(provider) %></h3> 
+        <h4><%= provider.address %></h4><br>
+
+<% end %>

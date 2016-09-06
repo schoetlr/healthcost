@@ -1,6 +1,26 @@
 Rails.application.routes.draw do
   
 
+  namespace :admin do
+  
+  end
+
+  namespace :admin do
+  get 'procedures/new'
+  end
+
+  namespace :admin do
+  get 'procedures/edit'
+  end
+
+  namespace :admin do
+  get 'procedures/index'
+  end
+
+  namespace :admin do
+  get 'procedures/show'
+  end
+
   resources :reviews
 
   devise_for :providers
@@ -11,6 +31,15 @@ Rails.application.routes.draw do
   
   resources :procedures 
   resources :providers
+
+  namespace :admin do 
+    
+    root 'static_pages#welcome'
+
+    resources :providers do 
+      resources :procedures
+    end
+  end
      
 
   get "/procedure_list" => "static_pages#procedure_list"

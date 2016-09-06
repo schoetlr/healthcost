@@ -1,7 +1,4 @@
-class ProvidersController < ApplicationController
-  
-  before_filter :authenticate_provider!, :except => [:index, :show, :search_by_address, :search_by_name]
-	
+class Admin::ProvidersController < ApplicationController
   def index
     if params[:search]
       @providers = Provider.search(params[:search]).order("created_at DESC")
@@ -10,7 +7,7 @@ class ProvidersController < ApplicationController
     end
   end
 
-	def search_by_address
+  def search_by_address
 
     address = params[:address]
     @providers = Provider.near(address, 50)
@@ -19,11 +16,8 @@ class ProvidersController < ApplicationController
 
     
 
-	def show
-	  @procedures = Procedure.all
+  def show
+    @procedures = Procedure.all
       @provider = Provider.includes(:procedures).find(params[:id])
-	end
-
-	
+  end
 end
-

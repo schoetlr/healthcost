@@ -1,0 +1,7 @@
+<%= render partial: 'layouts/flash', locals: { :flash => flash } %>
+<h1>New procedure for <%= @provider.name %></h1>
+
+<%= render partial: 'form', locals: { :procedure => @procedure } %>
+
+<%= link_to 'Back', procedures_path %>
+

@@ -1,7 +1,7 @@
 class ProceduresController < ApplicationController
-  before_filter :authenticate_provider!, :except => [:index, :show, :pro_show]
+  before_filter :authenticate_provider!, :except => [:index, :show]
   before_action :find_procedure, only: [:edit, :update, :destroy]
-  before_action :authorize_resource!, except: [:index, :show, :pro_show, :new, :create]
+  before_action :authorize_resource!, except: [:index, :show, :new, :create]
 
 
   def index
@@ -91,6 +91,6 @@ class ProceduresController < ApplicationController
   
   def procedure_params
     params.require(:procedure).permit(:name, :code, :cash_price, 
-                                      :insurance_price)
+                                      :insurance_price, :price_description)
   end
 end

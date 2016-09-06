@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Provider.destroy_all
+
+Procedure.destroy_all
+
+Review.destroy_all
+
+
+puts "creating providers"
+15.times do 
+
+  provider = Provider.new(email: Faker::Internet.safe_email,
+                  name: Faker::Company.name,
+                  password: "password")
+  provider.save!
+end
