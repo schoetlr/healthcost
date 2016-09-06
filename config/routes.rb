@@ -1,25 +1,6 @@
 Rails.application.routes.draw do
   
 
-  namespace :admin do
-  
-  end
-
-  namespace :admin do
-  get 'procedures/new'
-  end
-
-  namespace :admin do
-  get 'procedures/edit'
-  end
-
-  namespace :admin do
-  get 'procedures/index'
-  end
-
-  namespace :admin do
-  get 'procedures/show'
-  end
 
   resources :reviews
 
