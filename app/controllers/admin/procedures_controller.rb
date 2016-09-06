@@ -54,7 +54,7 @@ class Admin::ProceduresController < ApplicationController
         flash[:error] = "Something went wrong"
         render :edit
       end
-    end
+    
   end
 
   
@@ -76,11 +76,6 @@ class Admin::ProceduresController < ApplicationController
    @procedure = Procedure.find(params[:id])
   end
 
-  def authorize_resource!
-   unless current_provider == @procedure.provider
-     raise Provider::NotAuthorized and return false
-   end
-  end
 
   
   def procedure_params

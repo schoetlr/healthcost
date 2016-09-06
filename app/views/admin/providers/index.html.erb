@@ -26,9 +26,26 @@
   </div>
 </div>
 
-<% @providers.each do |provider| %>
-      
-        <h3><%= link_to provider.name, new_admin_provider_procedure_path(provider) %></h3> 
-        <h4><%= provider.address %></h4><br>
+<table class="table tabled-bordered table-striped">
+  <tr>
+    <th>Provider</th>
+    <th>Address</th>
 
-<% end %>
+  </tr>
+
+  <% @providers.each do |provider| %>
+    <tr>
+      <td>
+        <h3><%= link_to provider.name, new_admin_provider_procedure_path(provider) %></h3> 
+      </td>
+      <td>
+        <h4><%= provider.address %></h4>
+      </td>
+      <td>
+        <%= link_to "View All Procedures", admin_provider_procedures_path(provider) %>
+      </td>
+    </tr>
+
+  <% end %>
+
+</table>

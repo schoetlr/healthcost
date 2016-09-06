@@ -1,6 +1,6 @@
 <h1>Edit <%= @procedure.name %> for <%= @provider.name %></h1>
 
-<%= render 'form' %>
+<%= render partial: 'edit_form', locals: {:procedure => @procedure} %>
 
 <%= link_to 'Show', admin_provider_procedure_path(@provider, @procedure) %> |
 <%= link_to 'Back', admin_provider_procedures_path(@provider) %>
