@@ -23,8 +23,10 @@
 
 
 <% @providers.each do |provider| %>
-      
-        <h3><%= link_to provider.name, provider_path(provider) %></h3> 
-        <h4><%= provider.address %></h4><br>
+  
+  <% next if provider.admin == true %>
+  
+  <h3><%= link_to provider.name, provider_path(provider) %></h3> 
+  <h4><%= provider.address %></h4><br>
 
 <% end %>
