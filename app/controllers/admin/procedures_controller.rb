@@ -1,11 +1,13 @@
-class Admin::ProceduresController < ApplicationController
+class Admin::ProceduresController < AdminController
   def index
     if params[:search]
       @procedures = Procedure.search(params[:search]).order("created_at DESC")
     elsif params[:code]
       @procedures = Procedure.with_code(params[:code])
+      set_provider(params[:provider_id])
     else
       @procedures = Procedure.all.order('created_at DESC')
+      set_provider(params[:provider_id])
     end
   end
 
@@ -74,6 +76,10 @@ class Admin::ProceduresController < ApplicationController
     
   def find_procedure
    @procedure = Procedure.find(params[:id])
+  end
+
+  def set_provider(id)
+    @provider = Provider.find(id)
   end
 
 

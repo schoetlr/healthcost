@@ -20,6 +20,6 @@
   <%= number_to_currency(@procedure.cash_price) %>
 </p>
 
-<%= link_to 'Edit', edit_procedure_path(@procedure) %> 
+<%= link_to 'Edit', edit_admin_provider_procedure_path(@procedure.provider, @procedure) %> 
 
 

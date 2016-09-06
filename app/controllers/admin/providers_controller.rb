@@ -1,4 +1,4 @@
-class Admin::ProvidersController < ApplicationController
+class Admin::ProvidersController < AdminController
   def index
     if params[:search]
       @providers = Provider.search(params[:search]).order("created_at DESC")
