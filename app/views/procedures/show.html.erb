@@ -12,12 +12,12 @@
 
 <p>
   <strong>Insurance Price:</strong>
-  <%= @procedure.insurance_price %>
+  <%= number_to_currency(@procedure.insurance_price) %>
 </p>
 
 <p>
   <strong>Cash Price:</strong>
-  <%= @procedure.cash_price %>
+  <%= number_to_currency(@procedure.cash_price) %>
 </p>
 
 <%= link_to 'Edit', edit_procedure_path(@procedure) %> 
