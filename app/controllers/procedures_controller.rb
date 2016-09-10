@@ -36,20 +36,17 @@ class ProceduresController < ApplicationController
 
   
   def create
-    @provider = current_provider
     @procedure = @provider.procedures.new(procedure_params)
     @procedure.provider_id = current_provider.id
 
-
-    respond_to do |format|
-      if @procedure.save
-        format.html { redirect_to @procedure, notice: 'Procedure was successfully created.' }
-        format.json { render :show, status: :created, location: @procedure }
-      else
-        format.html { render :new }
-        format.json { render json: @procedure.errors, status: :unprocessable_entity }
-      end
+    if @procedure.save
+      flash[:success] = 'Procedure was successfully created.' 
+      redirect_to @procedure
+    else
+      flash[:error] = "Something went wrong."
+      render :new
     end
+    
   end
 
   
@@ -69,10 +66,12 @@ class ProceduresController < ApplicationController
   
   def destroy
     @procedure = Procedure.find(params[:id])
-    @procedure.destroy
-    respond_to do |format|
-      format.html { redirect_to procedure_list_path, notice: 'Procedure was successfully destroyed.' }
-      format.json { head :no_content }
+    if @procedure.destroy
+      flash[:success] = "Procedure destroyed"
+      redirect_to procedure_list_path
+    else
+      flash[:error] = "Something went wrong"
+      redirect_to :back
     end
   end
 
